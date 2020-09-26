@@ -17,12 +17,11 @@
         }
         li img{
             width: 12vw;
-            height: 12vw;
-
-           
-            
+            height: 12vw;   
         }
+
     </style>
+
     <div id="container">
 
     </div>
@@ -31,8 +30,8 @@
 
 <script>
     (async ()=>{
-        const response = await fetch("/imgsl.json")
-    const data = await response.json();
+        const imgsList = await fetch("/imgsList.json")
+    const data = await imgsList.json();
 
     const list = data.map(item => `<li><img src="${item}"></img> </li>`).join("");
     //document.getElementById("container").innerHTML = list

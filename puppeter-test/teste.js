@@ -2,9 +2,9 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
-  await page.goto("https://www.instagram.com/theweeknd/");
+  await page.goto("https://www.instagram.com/sza/");
 
 
   const imgList = await page.evaluate(() => {
@@ -18,8 +18,8 @@ const fs = require('fs');
 
   console.log(imgList);
 
-  fs.writeFile("imgsl.json", JSON.stringify(imgList, null, 2), null, (err) => {
-    if (err) throw new Error("Deu erro")
+  fs.writeFile("imgsList.json", JSON.stringify(imgList, null, 2), null, (err) => {
+    if (err) throw new Error("Something went wrong")
   });
 
  // await page.keyboard.type('World', { delay: 100 });
