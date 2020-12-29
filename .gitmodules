@@ -1,0 +1,9 @@
+[submodule "data-structures.ts"]
+	path = data-structures.ts
+	url = https://github.com/wellingtonmacena/data-structures.ts.git
+[submodule "Dev.Filter"]
+	path = Dev.Filter
+	url = https://github.com/wellingtonmacena/Dev.Filter.git
+[submodule "spotify-favorites"]
+	path = spotify-favorites
+	url = https://github.com/wellingtonmacena/spotify-favorites.git
